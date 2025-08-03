@@ -1,0 +1,11 @@
+services:
+  ai-app:
+    build: .
+    depends_on:
+      - llm
+
+  llm:
+    provider:
+      type: model
+      options:
+        model: ai/llama3.2
