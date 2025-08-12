@@ -1,7 +1,10 @@
 FROM python:3.12-slim
 
+WORKDIR /app
+
 RUN pip install langchain_openai
+RUN pip install streamlit
 
 COPY . .
 
-CMD ["python3", "app.py"]
+CMD ["streamlit", "run", "app.py"]
